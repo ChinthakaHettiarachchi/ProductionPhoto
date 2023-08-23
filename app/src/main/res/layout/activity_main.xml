@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/take_photo"
+        android:padding="40dp"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        tools:ignore="RtlHardcoded,TextContrastCheck"/>
+
+    <Button
+        android:id="@+id/scan_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/take_photo"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp"
+        android:drawableLeft="@drawable/ic_scan_qr"
+        android:padding="40dp"
+        android:text="@string/scan_qr"
+        tools:ignore="RtlHardcoded,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+        android:text="@string/clear"
+        app:backgroundTint = "#009688"
+        tools:ignore="RtlHardcoded,TextContrastCheck"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="82dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:onClick="signUp"-->
+<!--        android:text="Signup Here"-->
+<!--        android:textColor="#009688"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold" />-->
+</RelativeLayout>

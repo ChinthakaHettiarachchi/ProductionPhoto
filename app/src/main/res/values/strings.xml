@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Production Photo 2.0</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="scan_qr">Scan QR Code</string>
+    <string name="title_activity_upload">UploadActivity</string>
+    <string name="product_image">Product Image</string>
+    <string name="upload">Upload</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+</resources>
