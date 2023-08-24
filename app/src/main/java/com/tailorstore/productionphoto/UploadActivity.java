@@ -24,6 +24,7 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.Objects;
 
 public class UploadActivity extends AppCompatActivity {
 
@@ -81,8 +82,8 @@ public class UploadActivity extends AppCompatActivity {
 
         upload.setOnClickListener(v -> {
             upload.setEnabled(false);
-            String tag1 = spinnerTag.getSelectedItem().toString();
-            Toast.makeText(UploadActivity.this, "Tag: "+ tag1, Toast.LENGTH_SHORT).show();
+            String tagName = spinnerTag.getSelectedItem().toString();
+            Toast.makeText(UploadActivity.this, "Tag: "+ tagName.replace("#", "") + " Product code "+productCode, Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -132,7 +133,7 @@ public class UploadActivity extends AppCompatActivity {
             b.recycle();
             out.recycle();
         } catch (Exception e) {
-            Log.e("UploadActivity", e.getMessage());
+            Log.e("UploadActivity", Objects.requireNonNull(e.getMessage()));
         }
     }
 
