@@ -3,6 +3,7 @@ package com.tailorstore.productionphoto;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -83,7 +84,9 @@ public class UploadActivity extends AppCompatActivity {
         upload.setOnClickListener(v -> {
             upload.setEnabled(false);
             String tagName = spinnerTag.getSelectedItem().toString();
-            Toast.makeText(UploadActivity.this, "Tag: "+ tagName.replace("#", "") + " Product code "+productCode, Toast.LENGTH_SHORT).show();
+            
+            final Activity self = this;
+            new FileUploadTask(self, imageFilePath, "?productCode="+productCode+"&tag="+tagName.replace("#", "")).execute();
         });
     }
 
