@@ -42,17 +42,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         takePhoto = findViewById(R.id.take_photo);
         scanQr = findViewById(R.id.scan_qr);
         contentTxt = findViewById(R.id.content_text);
-        clearBtn = (Button) findViewById(R.id.clear_button);
+        clearBtn = findViewById(R.id.clear_button);
 
         scanQr.setOnClickListener(this);
         takePhoto.setOnClickListener(this);
-        clearBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                productCode = "";
-                contentTxt.setText(productCode);
-                enableTakePhoto();
-            }
+        clearBtn.setOnClickListener(v -> {
+            productCode = "";
+            contentTxt.setText(productCode);
+            enableTakePhoto();
         });
 
         enableTakePhoto();
